@@ -37,16 +37,3 @@ crash_*.txt
 # Local Config Overrides (user-specific settings)
 *.local
 *.user
-
-# ======================
-# Optional: Uncomment if applicable
-# ======================
-
-# Python (if using build scripts)
-# __pycache__/
-# *.py[cod]
-# .venv/
-
-# Node.js (if using tooling)
-# node_modules/
-# npm-debug.log

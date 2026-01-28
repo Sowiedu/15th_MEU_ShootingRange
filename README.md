@@ -1,52 +1,83 @@
+<div align="center">
+
 # 15th MEU Shooting Range
 
-A custom shooting range mod for **Arma Reforger**, developed for the [15th MEU Realism Unit](https://15thmeu.net/).
+**RFC / Product Requirements Document**
+
+*A custom shooting range mod for training and qualification scenarios*
+
+</div>
+
+<br>
 
 ## Overview
 
-This mod provides a dedicated shooting range environment for marksmanship training and weapon familiarization.
+A standardized shooting range with integrated scoring, timing, and performance tracking.  
+Designed for training and qualification scenarios within the **15th MEU Realism Unit**.
+
+<br>
 
 ## Features
 
-- 🎯 **Target Systems** - Static and pop-up targets at various distances
-- 🔫 **Weapon Stations** - Pre-configured loadouts for quick testing  
-- 📏 **Range Markers** - Distance indicators for zeroing practice
-- 🏗️ **Modular Design** - Easily extensible range layouts
+### Targets
+Standard Arma Reforger practice targets with hit registration and accurate scoring.
 
-## Installation
+### Scoring
+Per-player tracking throughout the session:
 
-### Players
-1. Subscribe to the mod on the Arma Reforger Workshop
-2. Enable the mod in your game launcher
-3. Load the shooting range scenario
+| Metric | Description |
+|--------|-------------|
+| Shots Fired | Total rounds discharged |
+| Shots Hit | Successful target impacts |
+| Shots Missed | Rounds that did not connect |
 
-### Developers
-```bash
-git clone https://github.com/Sowiedu/15th_MEU_ShootingRange.git
-```
-Open the project in **Arma Reforger Workbench** to edit and build.
+### Scoreboard
+In-game display prop with real-time score updates and individual player performance.
 
-## Project Structure
+### Timer
+Configurable modes — countdown, count-up, or stopwatch — displayed above the scoreboard.
 
-```
-15th_MEU_ShootingRange/
-├── Addons/                # Main mod addon(s)
-├── Assets/                # 3D models, textures, materials
-├── Configs/               # Entity and component configurations
-├── Scripts/               # Enforce script files
-├── Worlds/                # World/scenario files
-└── README.md
-```
+### Rangemaster Controls
+| Action | Function |
+|--------|----------|
+| Pop Up | Raise all targets |
+| Fold Down | Lower all targets |
+| Configure | Timer settings |
+| Clear | Reset scoreboard |
 
-## Contributing
+<br>
 
-Contributions are welcome! Please coordinate with the 15th MEU development team before submitting changes.
+## Technical Architecture
 
-## License
+| Component | Description |
+|-----------|-------------|
+| Target Entities | Vanilla targets with hit registration callbacks |
+| Score Manager | Server-authoritative player stat tracking |
+| Scoreboard Entity | Server-authoritative dynamic UI overlay (Screen) on a prop |
+| Timer System | Server-authoritative, synchronized across all clients, displayed on the scoreboard |
+| Rangemaster Interface | Tablet UI |
 
-This project is developed for the 15th MEU Realism Unit. Usage and distribution terms TBD.
+<br>
+
+## Scope
+
+**MVP (v0.1)**
+- Single lane configuration (one player, one target)
+- Two rangemaster controls (pop up/fold down)
+- Scoreboard (no timer)
+
+
+**Future**
+- Leaderboards and historical records
+- Qualification courses (pistol, rifle, etc.)
+- CSV export
+
+<br>
 
 ---
 
-**15th MEU Realism Unit**  
-*Semper Fidelis*
+<div align="center">
+
+*Developed for the [15th MEU Realism Unit](https://15thmeu.net/)*
+
+</div>
