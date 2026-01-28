@@ -1,0 +1,8 @@
+GameProject {
+ ID "15thMEUShootingRange"
+ GUID "6878FC4170A2C56A"
+ TITLE "15th MEU Shooting Range"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
