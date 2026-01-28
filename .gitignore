@@ -1,0 +1,52 @@
+# ======================
+# Arma Reforger Mod .gitignore
+# ======================
+
+# Build & Publishing Outputs
+.publish/
+.deploy/
+*.gproj.bak
+
+# Workbench & Editor Temp Files
+*.tmp
+*.bak
+*.cache
+*.lnk
+Workbench/.settings/
+
+# Addons Build Output (local builds)
+addons/*/bin/
+addons/*/.build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE / Editor Configs
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Logs & Crash Reports
+*.log
+*.rpt
+crash_*.txt
+
+# Local Config Overrides (user-specific settings)
+*.local
+*.user
+
+# ======================
+# Optional: Uncomment if applicable
+# ======================
+
+# Python (if using build scripts)
+# __pycache__/
+# *.py[cod]
+# .venv/
+
+# Node.js (if using tooling)
+# node_modules/
+# npm-debug.log
